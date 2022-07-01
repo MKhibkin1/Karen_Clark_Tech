@@ -1,0 +1,17 @@
+./containerized_applications/react-front-end/node_modules
+./containerized_applications/react-front-end/.pnp
+./containerized_applications/react-front-end/.pnp.js
+
+./containerized_applications/react-front-end/coverage
+
+./containerized_applications/react-front-end/build
+
+./containerized_applications/react-front-end/.DS_Store
+./containerized_applications/react-front-end/.env.local
+./containerized_applications/react-front-end/.env.development.local
+./containerized_applications/react-front-end/.env.test.local
+./containerized_applications/react-front-end/.env.production.local
+
+./containerized_applications/react-front-end/npm-debug.log*
+./containerized_applications/react-front-end/yarn-debug.log*
+./containerized_applications/react-front-end/yarn-error.log*
