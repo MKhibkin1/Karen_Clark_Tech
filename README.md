@@ -62,3 +62,52 @@ username: karen_clark_serviceworker01 <br />
 password: Interview
 
 
+Flask Backend:
+Coordinate data for state boundaries was loaded through shp files for the US using the python libraries shapely and fiona. There is currently only one rest endpoint for the back end that involves passing in the state abreviation.
+
+React Front End:
+A third party component library was used to display a map in the browser.
+
+---
+<br />
+
+**Section 3: Running and Interface**
+<br />
+
+In the future the following steps would be abstracted away in a docker container. 
+
+Loading / interfacing with database: 
+---
+(Change directories to the database directory)
+A tar file of the database dump is included in the database directory. There are two ways to restore the state of the database developed for this project
+
+With PG utilities:
+1. Tar file restore with 
+pg_restore -d karen_clark karen_clark_DB.tar
+
+Manually:
+1. create a database karen_clark
+2. Create a use with user name karen_clark_serviceworker01 and passowrd Interview
+3. Run the sql scripts found database/sql_scripts/table_creation
+4. Set environemnt variables:
+    A. POSTGRES_USER=karen_clark_serviceworker01
+    B. POSTGRES_USER_PW=Interview
+5. Run data-ingest.py
+
+Loading / interfacing with Backend:
+---
+(Change directories to the flask_backend directory)
+1. Install the packages in requirements.txt
+2. Make sure environemtn variables are set as they are in the database section
+3. run main.py
+
+
+Loading / interfacing with Frontend:
+---
+(Change directories to the react-front-end directory)
+1. run yarn to install packages
+2. run yarn start to start the server
+
+to see the results go to:
+http://localhost:3000
+
